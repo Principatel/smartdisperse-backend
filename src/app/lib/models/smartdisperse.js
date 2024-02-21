@@ -1,9 +1,10 @@
 const { default: mongoose } = require("mongoose");
 
 const disperse_data = new mongoose.Schema({
-  address: String,
+  userid: String,
   name: String,
+  address: String,
 });
 
 export const smartdisperse_data =
-  mongoose.models.addressname || mongoose.model("addressname", disperse_data);
+  mongoose.models.dummydatas || mongoose.model("dummydatas", disperse_data);

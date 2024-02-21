@@ -29,11 +29,10 @@ export async function POST(request) {
     );
     console.log("Connected to MongoDB!!");
     const payload = await request.json();
-    console.log("request sent", payload);
-    let data = new smartdisperse_data(payload);
+    console.log("payload:", smartdisperse_data);
+    let data = await smartdisperse_data(payload);
     console.log("data", data);
     console.log("saving");
-
     result = await data.save();
     console.log("Data uploaded successfully");
   } catch (err) {
